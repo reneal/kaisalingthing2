@@ -1,0 +1,126 @@
+# See https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md#complete-example
+
+baseurl = "http://kaisalingthing.ee"
+title = "Kaisa Ling Thing"
+theme = "hugo-coder."
+languagecode = "en"
+defaultcontentlanguage = "et"
+
+paginate = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Teet ja Pojad OÜ"
+  info = "Vaudeville blues, tricks and tomfoolery."
+  description = "Kaisa Ling Thing's band website"
+  keywords = "band,music,concerts,estonia"
+  avatarurl = "images/C_01.webp"
+
+  faviconSVG = "/images/favicon.svg"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
+
+  since = 2017
+
+  colorScheme = "light"
+  hidecolorschemetoggle = true
+
+  customCSS = ["css/custom.css"]
+   customSCSS = ["css/_events.scss"]
+  # customJS = ["js/eventlist.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+    name = "Facebook"
+    icon = "fab fa-facebook"
+    weight = 1
+    url = "http://facebook.com/kaisalingthing/"
+[[params.social]]
+    name = "Instagram"
+    icon = "fab fa-instagram"
+    weight = 2
+    url = "https://www.instagram.com/kaisalingthing/"
+
+[[params.social]]
+    name = "Spotify"
+    icon = "fab fa-spotify"
+    weight = 3
+    url = "https://open.spotify.com/artist/3hKHFXmQ7YsOlvRs8jXAvY"
+
+[[params.social]]
+    name = "Apple"
+    icon = "fab fa-apple"
+    weight = 4
+    url = "https://music.apple.com/us/artist/kaisa-ling-thing/1440197106"
+
+[[params.social]]
+    name = "Youtube"
+    icon = "fab fa-youtube"
+    weight = 5
+    url = "https://www.youtube.com/channel/UCAOYQpvfu4BKkZRJeVPIgyQ"
+
+
+# Menu links
+[languages]
+    [languages.en]
+        languagename = "English"
+
+#        [languages.en.menu]
+
+ #           [[languages.en.menu.main]]
+  #          name = "About"
+   #         weight = 1
+   #         url = "about/"
+#
+#          [[languages.en.menu.main]]
+#            name = "Press"
+#            weight = 2
+#            url = "posts/"
+            [[languages.en.menu.main]]
+            name = "Concerts"
+            weight = 1
+            url = "events/"
+
+            [[languages.en.menu.main]]
+            name = "Watch"
+            weight = 3
+            url = "projects/"
+
+            [[languages.en.menu.main]]
+            name = "Contact me"
+            weight = 5
+            url = "contact/"
+
+
+    [languages.et]
+        languagename = "Eesti"
+        title = "Kaisa Ling Thing"
+
+        [languages.et.params]
+            info = "Eesti esimene vodevillibluusiansambel."
+            description = "Kaisa Ling Thingi koduleht"
+            keywords = "ansambel,bänd,muusika,kontsert,eesti"
+
+        [languages.et.menu]
+            [[languages.et.menu.main]]
+            name = "Kontserdid"
+            weight = 1
+            url = "events/"
+
+            [[languages.et.menu.main]]
+            name = "Kuula"
+            weight = 3
+            url = "projects/"
+
+            [[languages.et.menu.main]]
+            name = "Kontakt"
+            weight = 5
+            url = "contact/"

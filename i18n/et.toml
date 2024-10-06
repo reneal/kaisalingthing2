@@ -1,0 +1,64 @@
+[categories]
+one = "kategooria"
+other = "kategooriad"
+
+[tags]
+one = "silt"
+other = "sildid"
+
+[series]
+one = "sarja"
+other = "sarjad"
+
+[authors]
+one = "autor"
+other = "autorid"
+
+[posts]
+other = "postitused"
+
+[reading_time]
+one = "Ühe minuti lugemine"
+other = "{{ .Count }}-minutiline lugemine"
+
+[page_not_found]
+other = "Lehte ei leitud"
+
+[page_does_not_exist]
+other = "Oi kui kahju, sellist lehte ei eksisteeri."
+
+[head_back]
+other = "Saate tagasi minna <a href=\"{{ . }}\">avalehele</a>."
+
+[licensed_under]
+other = "Litsents"
+
+[powered_by]
+other = "Seda lehte jooksutavad"
+
+[see_also]
+other = "Vaata ka"
+
+[note]
+other = "märkus"
+
+[tip]
+other = "nõuanne"
+
+[example]
+other = "näide"
+
+[question]
+other = "küsimus"
+
+[info]
+other = "info"
+
+[warning]
+other = "hoiatus"
+
+[error]
+other = "viga"
+
+[link_to_heading]
+other = "Viide pealkirjale"

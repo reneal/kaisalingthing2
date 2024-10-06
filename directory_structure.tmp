@@ -1,0 +1,545 @@
+.
+├── .git
+│   ├── HEAD
+│   ├── branches
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── modules
+│   │   └── themes
+│   │       └── hugo-coder.
+│   │           ├── HEAD
+│   │           ├── branches
+│   │           ├── config
+│   │           ├── description
+│   │           ├── hooks
+│   │           │   ├── applypatch-msg.sample
+│   │           │   ├── commit-msg.sample
+│   │           │   ├── fsmonitor-watchman.sample
+│   │           │   ├── post-update.sample
+│   │           │   ├── pre-applypatch.sample
+│   │           │   ├── pre-commit.sample
+│   │           │   ├── pre-merge-commit.sample
+│   │           │   ├── pre-push.sample
+│   │           │   ├── pre-rebase.sample
+│   │           │   ├── pre-receive.sample
+│   │           │   ├── prepare-commit-msg.sample
+│   │           │   ├── push-to-checkout.sample
+│   │           │   ├── sendemail-validate.sample
+│   │           │   └── update.sample
+│   │           ├── index
+│   │           ├── info
+│   │           │   └── exclude
+│   │           ├── logs
+│   │           │   ├── HEAD
+│   │           │   └── refs
+│   │           │       ├── heads
+│   │           │       │   └── main
+│   │           │       └── remotes
+│   │           │           └── origin
+│   │           │               └── HEAD
+│   │           ├── objects
+│   │           │   ├── info
+│   │           │   └── pack
+│   │           │       ├── pack-ffde3eeaf481decb647bf9bd7fd88576fabcf777.idx
+│   │           │       ├── pack-ffde3eeaf481decb647bf9bd7fd88576fabcf777.pack
+│   │           │       └── pack-ffde3eeaf481decb647bf9bd7fd88576fabcf777.rev
+│   │           ├── packed-refs
+│   │           └── refs
+│   │               ├── heads
+│   │               │   └── main
+│   │               ├── remotes
+│   │               │   └── origin
+│   │               │       └── HEAD
+│   │               └── tags
+│   ├── objects
+│   │   ├── 09
+│   │   │   └── ea9b03d7850e9a1827ebf0d557d4ef111c83db
+│   │   ├── info
+│   │   └── pack
+│   └── refs
+│       ├── heads
+│       └── tags
+├── .gitignore
+├── .gitmodules
+├── .hugo_build.lock
+├── archetypes
+│   └── default.md
+├── assets
+│   └── css
+│       ├── _events.scss
+│       └── custom.css
+├── content
+│   ├── contact.en.md
+│   ├── contact.et.md
+│   ├── events.en.md
+│   ├── events.et.md
+│   ├── projects.en.md
+│   └── projects.et.md
+├── data
+├── directory_structure.tmp
+├── hugo.toml
+├── i18n
+│   └── et.toml
+├── layouts
+│   └── events
+│       └── single.html
+├── public
+│   ├── 404.html
+│   ├── authors
+│   │   ├── index.html
+│   │   └── index.xml
+│   ├── categories
+│   │   ├── index.html
+│   │   └── index.xml
+│   ├── contact
+│   │   └── index.html
+│   ├── css
+│   │   ├── _events.css
+│   │   ├── _events.css.map
+│   │   ├── coder-dark.css
+│   │   ├── coder-dark.css.map
+│   │   ├── coder.css
+│   │   ├── coder.css.map
+│   │   └── custom.css
+│   ├── en
+│   │   ├── 404.html
+│   │   ├── authors
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   ├── categories
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   ├── contact
+│   │   │   └── index.html
+│   │   ├── events
+│   │   │   ├── index.html
+│   │   │   ├── index.xml
+│   │   │   └── page
+│   │   │       └── 1
+│   │   │           └── index.html
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   ├── kontakt
+│   │   │   └── index.html
+│   │   ├── kuula
+│   │   │   └── index.html
+│   │   ├── projects
+│   │   │   └── index.html
+│   │   ├── projects,kuula
+│   │   │   └── index.html
+│   │   ├── series
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   ├── sitemap.xml
+│   │   ├── tags
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   └── watch
+│   │       └── index.html
+│   ├── et
+│   │   ├── index.html
+│   │   └── sitemap.xml
+│   ├── events
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   └── page
+│   │       └── 1
+│   │           └── index.html
+│   ├── favicon.ico
+│   ├── fonts
+│   │   ├── LICENSE.txt
+│   │   ├── fa-brands-400.ttf
+│   │   ├── fa-brands-400.woff2
+│   │   ├── fa-regular-400.ttf
+│   │   ├── fa-regular-400.woff2
+│   │   ├── fa-solid-900.ttf
+│   │   └── fa-solid-900.woff2
+│   ├── images
+│   │   ├── BW_01.png
+│   │   ├── C_01.png
+│   │   ├── C_01.webp
+│   │   ├── DSC2929_Sven_Tupits.jpg
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   ├── niikolemees-kaanepilt.jpg
+│   │   └── site.webmanifest
+│   ├── index.html
+│   ├── index.xml
+│   ├── js
+│   │   ├── coder.js
+│   │   └── eventlist.js
+│   ├── kontakt
+│   │   └── index.html
+│   ├── kuula
+│   │   └── index.html
+│   ├── projects
+│   │   └── index.html
+│   ├── series
+│   │   ├── index.html
+│   │   └── index.xml
+│   ├── sitemap.xml
+│   └── tags
+│       ├── index.html
+│       └── index.xml
+├── resources
+│   └── _gen
+│       └── assets
+│           ├── css
+│           │   ├── _events.scss_fae17086e470d8c6ed0d487092f631b7.content
+│           │   └── _events.scss_fae17086e470d8c6ed0d487092f631b7.json
+│           └── scss
+│               ├── coder-dark.scss_6d167e6c13a8e6e320b510e9e8efa28e.content
+│               ├── coder-dark.scss_6d167e6c13a8e6e320b510e9e8efa28e.json
+│               ├── coder.scss_768006e9c108b876b6fcc8c77a1009d3.content
+│               └── coder.scss_768006e9c108b876b6fcc8c77a1009d3.json
+├── static
+│   ├── images
+│   │   ├── BW_01.png
+│   │   ├── C_01.png
+│   │   ├── C_01.webp
+│   │   ├── DSC2929_Sven_Tupits.jpg
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   ├── niikolemees-kaanepilt.jpg
+│   │   └── site.webmanifest
+│   └── js
+│       └── eventlist.js
+└── themes
+    └── hugo-coder.
+        ├── .editorconfig
+        ├── .git
+        ├── .github
+        │   ├── FUNDING.yml
+        │   ├── ISSUE_TEMPLATE
+        │   │   ├── bug_report.md
+        │   │   ├── feature_request.md
+        │   │   └── question.md
+        │   └── pull_request_template.md
+        ├── .gitignore
+        ├── CONTRIBUTORS.md
+        ├── LICENSE.md
+        ├── Makefile
+        ├── README.md
+        ├── archetypes
+        │   ├── default.md
+        │   └── posts.md
+        ├── assets
+        │   ├── js
+        │   │   ├── coder.js
+        │   │   └── purify.min.js
+        │   └── scss
+        │       ├── _base.scss
+        │       ├── _base_dark.scss
+        │       ├── _base_rtl.scss
+        │       ├── _content.scss
+        │       ├── _content_dark.scss
+        │       ├── _content_rtl.scss
+        │       ├── _float.scss
+        │       ├── _float_dark.scss
+        │       ├── _footer.scss
+        │       ├── _footer_dark.scss
+        │       ├── _mastodon.scss
+        │       ├── _navigation.scss
+        │       ├── _navigation_dark.scss
+        │       ├── _navigation_rtl.scss
+        │       ├── _notices.scss
+        │       ├── _notices_dark.scss
+        │       ├── _pagination.scss
+        │       ├── _syntax.scss
+        │       ├── _syntax_dark.scss
+        │       ├── _tabs.scss
+        │       ├── _tabs_dark.scss
+        │       ├── _taxonomies.scss
+        │       ├── _taxonomies_dark.scss
+        │       ├── _variables.scss
+        │       ├── coder-dark.scss
+        │       ├── coder-rtl.scss
+        │       ├── coder.scss
+        │       ├── css
+        │       │   └── normalize.css
+        │       └── font-awesome
+        │           ├── LICENSE.txt
+        │           ├── _animated.scss
+        │           ├── _bordered-pulled.scss
+        │           ├── _core.scss
+        │           ├── _fixed-width.scss
+        │           ├── _functions.scss
+        │           ├── _icons.scss
+        │           ├── _list.scss
+        │           ├── _mixins.scss
+        │           ├── _rotated-flipped.scss
+        │           ├── _screen-reader.scss
+        │           ├── _shims.scss
+        │           ├── _sizing.scss
+        │           ├── _stacked.scss
+        │           ├── _variables.scss
+        │           ├── brands.scss
+        │           ├── fontawesome.scss
+        │           ├── regular.scss
+        │           ├── solid.scss
+        │           └── v4-shims.scss
+        ├── docs
+        │   ├── analytics
+        │   │   ├── applicationinsights.md
+        │   │   ├── baidu.md
+        │   │   ├── clicky.md
+        │   │   ├── cloudflare.md
+        │   │   ├── fathom.md
+        │   │   ├── goatcounter.md
+        │   │   ├── googleanalytics.md
+        │   │   ├── googletagmanager.md
+        │   │   ├── matomo.md
+        │   │   ├── microanalytics.md
+        │   │   ├── pirsch.md
+        │   │   ├── plausible.md
+        │   │   ├── umami.md
+        │   │   ├── vercel.md
+        │   │   └── wideangle.md
+        │   ├── analytics.md
+        │   ├── comment-system.md
+        │   ├── configurations.md
+        │   ├── contributing.md
+        │   ├── faq.md
+        │   ├── home.md
+        │   ├── multilingual-mode.md
+        │   └── quick-start.md
+        ├── exampleSite
+        │   ├── content
+        │   │   ├── about.md
+        │   │   ├── about.pt-br.md
+        │   │   ├── authors
+        │   │   │   └── hugo-authors
+        │   │   │       ├── _index.md
+        │   │   │       └── _index.pt-br.md
+        │   │   ├── categories
+        │   │   │   ├── syntax
+        │   │   │   │   └── _index.pt-br.md
+        │   │   │   └── themes
+        │   │   │       └── _index.pt-br.md
+        │   │   ├── contact.md
+        │   │   ├── contact.pt-br.md
+        │   │   ├── posts
+        │   │   │   ├── emoji-support.md
+        │   │   │   ├── emoji-support.pt-br.md
+        │   │   │   ├── external-post.md
+        │   │   │   ├── external-post.pt-br.md
+        │   │   │   ├── html-and-css-only-tabs.md
+        │   │   │   ├── html-and-css-only-tabs.pt-br.md
+        │   │   │   ├── markdown-syntax.md
+        │   │   │   ├── markdown-syntax.pt-br.md
+        │   │   │   ├── math-typesetting.md
+        │   │   │   ├── math-typesetting.pt-br.md
+        │   │   │   ├── mermaid-support.md
+        │   │   │   ├── mermaid-support.pt-br.md
+        │   │   │   ├── more-rich-content.md
+        │   │   │   ├── more-rich-content.pt-br.md
+        │   │   │   ├── placeholder-text.md
+        │   │   │   ├── placeholder-text.pt-br.md
+        │   │   │   ├── rich-content.md
+        │   │   │   └── rich-content.pt-br.md
+        │   │   ├── projects.md
+        │   │   ├── projects.pt-br.md
+        │   │   └── tags
+        │   │       └── shortcodes
+        │   │           └── _index.pt-br.md
+        │   ├── hugo.toml
+        │   ├── layouts
+        │   │   └── .gitkeep
+        │   ├── resources
+        │   │   └── _gen
+        │   │       └── assets
+        │   │           └── scss
+        │   │               └── scss
+        │   │                   ├── coder-dark.scss_9e20ccd2d8034c8e0fd83b11fb6e2bd5.content
+        │   │                   ├── coder-dark.scss_9e20ccd2d8034c8e0fd83b11fb6e2bd5.json
+        │   │                   ├── coder.scss_fd4b5b3f9a48bc0c7f005d2f7a4cc30f.content
+        │   │                   └── coder.scss_fd4b5b3f9a48bc0c7f005d2f7a4cc30f.json
+        │   └── static
+        │       └── images
+        │           ├── N90.jpg
+        │           ├── apple-touch-icon.png
+        │           ├── avatar.jpg
+        │           ├── favicon-16x16.png
+        │           ├── favicon-32x32.png
+        │           └── favicon.svg
+        ├── go.mod
+        ├── hugo.toml
+        ├── i18n
+        │   ├── ar.toml
+        │   ├── bn.toml
+        │   ├── cs.toml
+        │   ├── de.toml
+        │   ├── en.toml
+        │   ├── es.toml
+        │   ├── fi.toml
+        │   ├── fr.toml
+        │   ├── he.toml
+        │   ├── hi.toml
+        │   ├── hu.toml
+        │   ├── id.toml
+        │   ├── it.toml
+        │   ├── ja.toml
+        │   ├── ko.toml
+        │   ├── ms.toml
+        │   ├── nl.toml
+        │   ├── np.toml
+        │   ├── oc.toml
+        │   ├── pl.toml
+        │   ├── pt-br.toml
+        │   ├── ro.toml
+        │   ├── ru.toml
+        │   ├── se.toml
+        │   ├── sk.toml
+        │   ├── sq.toml
+        │   ├── sr-latn.toml
+        │   ├── sr.toml
+        │   ├── tr.toml
+        │   ├── ur.toml
+        │   ├── zh-cn.toml
+        │   └── zh-tw.toml
+        ├── images
+        │   ├── logos
+        │   │   ├── favicon.png
+        │   │   ├── favicon.svg
+        │   │   ├── logomark.png
+        │   │   ├── logomark.svg
+        │   │   ├── logotype-a.png
+        │   │   ├── logotype-a.svg
+        │   │   ├── logotype-b.png
+        │   │   └── logotype-b.svg
+        │   ├── screenshot.png
+        │   └── tn.png
+        ├── layouts
+        │   ├── 404.html
+        │   ├── _default
+        │   │   ├── _markup
+        │   │   │   ├── render-heading.html
+        │   │   │   └── render-link.html
+        │   │   ├── baseof.html
+        │   │   ├── list.html
+        │   │   ├── single.html
+        │   │   └── terms.html
+        │   ├── index.html
+        │   ├── partials
+        │   │   ├── 404.html
+        │   │   ├── analytics
+        │   │   │   ├── applicationinsights.html
+        │   │   │   ├── baidu.html
+        │   │   │   ├── clicky.html
+        │   │   │   ├── cloudflare.html
+        │   │   │   ├── fathom.html
+        │   │   │   ├── goatcounter.html
+        │   │   │   ├── googletagmanager.html
+        │   │   │   ├── matomo.html
+        │   │   │   ├── microanalyticsio.html
+        │   │   │   ├── pirsch.html
+        │   │   │   ├── plausible.html
+        │   │   │   ├── umami.html
+        │   │   │   ├── vercel.html
+        │   │   │   ├── wideangle.html
+        │   │   │   └── yandex-metrika.html
+        │   │   ├── body
+        │   │   │   └── extensions.html
+        │   │   ├── csp.html
+        │   │   ├── float.html
+        │   │   ├── footer.html
+        │   │   ├── head
+        │   │   │   ├── alternative-output-formats.html
+        │   │   │   ├── color-scheme.html
+        │   │   │   ├── custom-icons.html
+        │   │   │   ├── custom-styles.html
+        │   │   │   ├── extensions.html
+        │   │   │   ├── hugo-generator.html
+        │   │   │   ├── meta-tags.html
+        │   │   │   └── theme-styles.html
+        │   │   ├── head.html
+        │   │   ├── header.html
+        │   │   ├── home
+        │   │   │   ├── author.html
+        │   │   │   ├── avatar.html
+        │   │   │   ├── extensions.html
+        │   │   │   └── social.html
+        │   │   ├── home.html
+        │   │   ├── list.html
+        │   │   ├── page.html
+        │   │   ├── pagination.html
+        │   │   ├── posts
+        │   │   │   ├── commento.html
+        │   │   │   ├── cusdis.html
+        │   │   │   ├── disqus.html
+        │   │   │   ├── giscus.html
+        │   │   │   ├── mastodon.html
+        │   │   │   ├── math.html
+        │   │   │   ├── series.html
+        │   │   │   ├── telegram.html
+        │   │   │   └── utterances.html
+        │   │   ├── taxonomy
+        │   │   │   ├── authors.html
+        │   │   │   ├── categories.html
+        │   │   │   └── tags.html
+        │   │   └── terms.html
+        │   ├── posts
+        │   │   ├── li.html
+        │   │   ├── list.html
+        │   │   └── single.html
+        │   └── shortcodes
+        │       ├── mermaid.html
+        │       ├── notice.html
+        │       ├── tab.html
+        │       └── tabgroup.html
+        ├── netlify.toml
+        ├── resources
+        │   └── _gen
+        │       └── assets
+        │           └── scss
+        │               ├── coder-dark.scss_9909fe12caa938878c0f06cd010153f1.content
+        │               ├── coder-dark.scss_9909fe12caa938878c0f06cd010153f1.json
+        │               ├── coder-dark.scss_e229566deac2466dcd73d10d2fe9546d.content
+        │               ├── coder-dark.scss_e229566deac2466dcd73d10d2fe9546d.json
+        │               ├── coder.scss_3309bf5eef245954e39c3edadcf84268.content
+        │               ├── coder.scss_3309bf5eef245954e39c3edadcf84268.json
+        │               ├── coder.scss_38b4d05915c0483e6cb106e4f0efccbc.content
+        │               ├── coder.scss_38b4d05915c0483e6cb106e4f0efccbc.json
+        │               └── scss
+        │                   ├── coder-dark.scss_9e20ccd2d8034c8e0fd83b11fb6e2bd5.content
+        │                   ├── coder-dark.scss_9e20ccd2d8034c8e0fd83b11fb6e2bd5.json
+        │                   ├── coder.scss_fd4b5b3f9a48bc0c7f005d2f7a4cc30f.content
+        │                   └── coder.scss_fd4b5b3f9a48bc0c7f005d2f7a4cc30f.json
+        ├── static
+        │   └── fonts
+        │       ├── LICENSE.txt
+        │       ├── fa-brands-400.ttf
+        │       ├── fa-brands-400.woff2
+        │       ├── fa-regular-400.ttf
+        │       ├── fa-regular-400.woff2
+        │       ├── fa-solid-900.ttf
+        │       └── fa-solid-900.woff2
+        └── theme.toml
+
+130 directories, 413 files

@@ -1,0 +1,29 @@
+/* Increase avatar image size */
+.avatar img {
+  width: 30rem;
+  height: auto;
+  border-radius: 0%;
+}
+
+@media only screen and (max-width: 768px) {
+  .avatar img {
+    width: 25rem;
+  }
+}
+
+/* Hide author name, because our logo already contains Kaisa Ling Thing */
+
+.centered .about h1 {
+  display: none
+}
+
+/* Increase social images size */
+.centered .about ul li a {
+  font-size: 5rem; /* New font size */
+}
+
+@media only screen and (max-width: 768px) {
+  .centered .about ul li a {
+    font-size: 4rem; /* New font size for smaller screens */
+  }
+}
