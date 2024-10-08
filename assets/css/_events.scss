@@ -1,25 +1,48 @@
-#events {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); // Create two equal-width columns
-  gap: 2rem; // Space between columns
-  width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Switch to a single column on smaller screens
+.wrapper {
+  .content {
+    .container {
+      #events {
+        display: grid;
+        .category-grid, .events-grid {
+          display: grid;
+        }
+        .category-header {
+          display: flex; justify-content: space-between; align-items: center;
+          .post-title {
+            display: flex; align-items: center;  /* This centers the content vertically */
+            a {
+              font-size: 2rem; color: #333; text-decoration: none;
+              &:hover { color: #007BFF; }
+            }
+          }
+          .buy-ticket-button {
+            padding: 0.6rem 1.2rem; background-color: #007BFF; color: white;
+            border-radius: 0.125rem; text-decoration: none;
+            &:hover, &:focus {
+              background-color: darken(#007BFF, 10%);
+            }
+          }
+        }
+        .event-image {
+          width: 100%; height: auto; border-radius: 8px;
+        }
+        .event-card {
+          display: flex; 
+          text-align: center;
+          gap: 1rem; /* Added gap for increased spacing between items */
+          a {
+            display: block;
+            text-decoration: none;
+          }
+          .date {
+            color: #333;
+          }
+          
+          .title {
+            color: #666;
+          }
+        }
+      }
+    }
   }
-}
-
-.post-content {
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.container {
-  margin: 1rem auto;
-  max-width: 1200px;  // Increase this value to whatever new maximum width you desire
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
