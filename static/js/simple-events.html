@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Event Series Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --fg-color: #212121;
+            --alt-bg-color: #e0e0e0;
+            --alt-fg-color: #000;
+            --darker-alt-bg-color: #ccc;
+            --link-color: #1565c0;
+            --accent-color: #f50057;
+        }
+
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            color: var(--fg-color);
+            background-color: var(--bg-color);
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--alt-bg-color);
+            padding: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--fg-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--link-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: var(--alt-fg-color);
+            margin: 4rem 0 2.5rem 0;
+        }
+
+        h1 {
+            font-size: 4.2rem;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            line-height: 1.3;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: all 0.25s ease-in;
+        }
+
+        a:focus,
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 3rem;
+        }
+
+        .event-card {
+            background-color: var(--alt-bg-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 2rem;
+        }
+
+        .event-title {
+            font-size: 2.4rem;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .event-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-list li i {
+            margin-right: 1rem;
+            color: var(--accent-color);
+        }
+
+        .event-date {
+            font-weight: 700;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--link-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: var(--alt-bg-color);
+            color: var(--fg-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            html {
+                font-size: 55%;
+            }
+
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+            <h1>Global Event Series Showcase</h1>
+
+            <div class="event-grid">
+                <div class="event-card">
+                    <img src="https://via.placeholder.com/800x400.png?text=Summer+Music+Festival" alt="Summer Music Festival">
+                    <div class="event-content">
+                        <h2 class="event-title">Summer Music Festival</h2>
+                        <ul class="event-list">
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">July 15, 2023:</span> Central Park, New York City</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">July 22, 2023:</span> Grant Park, Chicago</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">July 29, 2023:</span> Golden Gate Park, San Francisco</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="https://via.placeholder.com/800x400.png?text=World+Food+Tour" alt="World Food Tour">
+                    <div class="event-content">
+                        <h2 class="event-title">World Food Tour</h2>
+                        <ul class="event-list">
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">August 5-6, 2023:</span> Trafalgar Square, London</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">August 12-13, 2023:</span> Champ de Mars, Paris</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">August 19-20, 2023:</span> Piazza del Popolo, Rome</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="https://via.placeholder.com/800x400.png?text=Tech+Innovation+Summit" alt="Tech Innovation Summit">
+                    <div class="event-content">
+                        <h2 class="event-title">Tech Innovation Summit</h2>
+                        <ul class="event-list">
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">September 10, 2023:</span> Moscone Center, San Francisco</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">September 17, 2023:</span> ExCeL, London</li>
+                            <li><i class="fas fa-calendar-alt"></i><span class="event-date">September 24, 2023:</span> Tokyo Big Sight, Tokyo</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Global Event Series Showcase. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

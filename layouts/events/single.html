@@ -2,8 +2,13 @@
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
+<section class="container page">
+  <!-- <header>
+        <h1>Kontserdid</h1>
+      </header> -->
 <div id="events">
     <!-- Check if this comment appears -->
 </div>
-    [<script src="{{ "js/eventlist.js" | relURL }}"></script>]
+</section>
+    <script src="{{ "js/eventlist.js" | relURL }}"></script>]
 {{ end }}
