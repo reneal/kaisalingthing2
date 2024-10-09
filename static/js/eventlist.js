@@ -3,7 +3,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Get the current language
   var lang = document.documentElement.getAttribute('lang');
+
+  if (lang === 'en') {
+    var buyTicketText = 'Buy ticket'
+  }
+  else {
+    var buyTicketText = 'Osta pilet'
+  }
   
+  if (lang === 'en') {
+    var reservePlaceText = 'Reserve a seat'
+  }
+  else {
+    var reservePlaceText = 'Broneeri istekoht'
+  }
+  
+
+
   function getNoEventsText() {
     var noEventsTextEstonian = 'Praegu esinemisi kirjas pole, aga plaanis on kindlasti kontserte anda. Ärge muretsege!';
     var noEventsTextEnglish = 'Currently, there are no scheduled performances, but we definitely plan to have concerts. Don\'t worry!';
@@ -90,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       // Display one title / general information per category with 'Osta pilet' button styled as a button.
       let categoryHtml = `
-        <div class="category-grid">
+        <div class="eventseries-grid">
           <div class="category-header">
             <h3 class="post-title">
               <a href="${events.call_to_action_url}" target="_blank">${events.title}</a>
@@ -158,29 +174,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ]
 } */
-  // fetchJSON('https://fienta.com/o/840?format=json', function (err, data) {
-    fetchJSON('https://fienta.com/o/825?format=json', function (err, data) {
+  fetchJSON('https://fienta.com/o/840?format=json', function (err, data) {
+  // Heldeke test  fetchJSON('https://fienta.com/o/825?format=json', function (err, data) {
     if (!err && data.events.length) {
       // Group events by series_id
       let groupedEvents = {};
       data.events.forEach(function (event) {
             if (!groupedEvents[event.series_id]) {
               groupedEvents[event.series_id] = [];
+              groupedEvents[event.series_id].call_to_action_text = buyTicketText; // Default text, can be overriden by specific events.
+
+
                // Hardcode name & other parameters for specific series
                if(event.series_id === 'kaisa-ling-thingi-kontserttuur-big-bang') {
                 groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
                 groupedEvents[event.series_id].call_to_action_url = 'https://www.hooandja.ee/projekt/kaisa-ling-thingi-kolmas-taispikk-album-big-bang'
-                groupedEvents[event.series_id].call_to_action_text = "Osta pilet";
               } 
               else if(event.series_id == 'late-night-cabaret') {
                 groupedEvents[event.series_id].title = 'Late Night Cabaret';
                 groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
-                groupedEvents[event.series_id].call_to_action_text = "Broneeri istekoht";
+                groupedEvents[event.series_id].call_to_action_text = reservePlaceText;
               }
               else {
                 groupedEvents[event.series_id].title = event.title;
                 groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
-                groupedEvents[event.series_id].call_to_action_text = "Osta pilet";
               }
             }
             groupedEvents[event.series_id].push(event);
