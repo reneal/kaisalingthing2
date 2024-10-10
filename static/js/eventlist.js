@@ -189,9 +189,11 @@ document.addEventListener('DOMContentLoaded', function () {
                if(event.series_id === 'kaisa-ling-thingi-kontserttuur-big-bang') {
                 if(lang === 'en') {
                   groupedEvents[event.series_id].title = "Big Bäng (New Album Tour)"; 
+                  groupedEvents[event.series_id].call_to_action_text = "Buy album";
                 }
                 else {
                   groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
+                  groupedEvents[event.series_id].call_to_action_text = "Osta album"";
                 }
                 groupedEvents[event.series_id].call_to_action_url = 'https://www.hooandja.ee/projekt/kaisa-ling-thingi-kolmas-taispikk-album-big-bang'
               } 
