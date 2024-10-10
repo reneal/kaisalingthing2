@@ -121,8 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
       events.forEach(function (event) {
         categoryHtml += `
           <div class="event-card">
-            <a class="date" href="${event.url}" target="_blank">${formatEventDate(event.starts_at)}</a>
+            <a class="date" href="${event.url}" target="_blank">
+              ${formatEventDate(event.starts_at)}
+            </a>
             <a class="title" href="${event.url}" target="_blank">${formatEventLocation(event.venue)}</a>
+            <div class="buy-ticket-section">
+              <a href="${event.buy_tickets_url}" target="_blank" class="buy-ticket-button">
+                ${buyTicketText}
+              </a>
+            </div>
           </div>`;
       });
       categoryHtml += '</div></div>';
