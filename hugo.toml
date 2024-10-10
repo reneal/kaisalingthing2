@@ -92,7 +92,7 @@ style = "github-dark"
             [[languages.en.menu.main]]
             name = "Watch"
             weight = 3
-            url = "projects/"
+            url = "watch/"
 
             [[languages.en.menu.main]]
             name = "Contact me"
@@ -118,9 +118,9 @@ style = "github-dark"
             [[languages.et.menu.main]]
             name = "Kuula"
             weight = 3
-            url = "projects/"
+            url = "kuula/"
 
             [[languages.et.menu.main]]
             name = "Kontakt"
             weight = 5
-            url = "contact/"
+            url = "kontakt/"
