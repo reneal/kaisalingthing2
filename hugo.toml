@@ -113,7 +113,7 @@ style = "github-dark"
             [[languages.et.menu.main]]
             name = "Kontserdid"
             weight = 1
-            url = "events/"
+            url = "kontserdid/"
 
             [[languages.et.menu.main]]
             name = "Kuula"
