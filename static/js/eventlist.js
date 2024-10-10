@@ -187,7 +187,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                // Hardcode name & other parameters for specific series
                if(event.series_id === 'kaisa-ling-thingi-kontserttuur-big-bang') {
-                groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
+                if(lang === 'en') {
+                  groupedEvents[event.series_id].title = "Big Bäng (New Album Tour)"; 
+                }
+                else {
+                  groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
+                }
                 groupedEvents[event.series_id].call_to_action_url = 'https://www.hooandja.ee/projekt/kaisa-ling-thingi-kolmas-taispikk-album-big-bang'
               } 
               else if(event.series_id == 'late-night-cabaret') {
