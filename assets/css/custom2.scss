@@ -1,46 +1,87 @@
-.wrapper {
-  .content {
-    .container {
-      #events {
+.centered {
+  .about {
+    ul {
+    li {
+      a {
+        &:hover,
+        &:focus {
+          &[aria-label="Facebook"] {
+            color: #1877f2; // Facebook blue
+          }
+          &[aria-label="Instagram"] {
+            color: #e4405f; // Instagram pink
+          }
+          &[aria-label="Spotify"] {
+            color: #1db954; // Spotify green
+          }
+          &[aria-label="Apple"] {
+            color: #a3aaae; // Apple Music gray
+          }
+          &[aria-label="Youtube"] {
+            color: #ff0000; // YouTube red
+          }
+        }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  .container {
+    #events {
+      display: grid;
+      .eventseries-grid,
+      .events-grid {
         display: grid;
-        .eventseries-grid, .events-grid {
-          display: grid;
-        }
-        .category-header {
-          display: flex; justify-content: space-between; align-items: center;
-          .post-title {
-            display: flex; align-items: center;  /* This centers the content vertically */
-            a {
-              font-size: 2rem; color: #333; text-decoration: none;
-              &:hover { color: #007BFF; }
-            }
-          }
-          .buy-ticket-button {
-            padding: 0.6rem 1.2rem; background-color: #007BFF; color: white;
-            border-radius: 0.125rem; text-decoration: none;
-            &:hover, &:focus {
-              background-color: darken(#007BFF, 10%);
-            }
-          }
-        }
-        .event-image {
-          width: 100%; height: auto; border-radius: 8px;
-        }
-        .event-card {
-          display: flex; 
-          text-align: center;
-          gap: 1rem; /* Added gap for increased spacing between items */
+      }
+      .category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .post-title {
+          display: flex;
+          align-items: center; /* This centers the content vertically */
           a {
-            display: block;
-            text-decoration: none;
-          }
-          .date {
+            font-size: 2rem;
             color: #333;
+            text-decoration: none;
+            &:hover {
+              color: #007bff;
+            }
           }
-          
-          .title {
-            color: #666;
+        }
+        .buy-ticket-button {
+          padding: 0.6rem 1.2rem;
+          background-color: #007bff;
+          color: white;
+          border-radius: 0.125rem;
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            background-color: darken(#007bff, 10%);
           }
+        }
+      }
+      .event-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .event-card {
+        display: flex;
+        text-align: center;
+        gap: 1rem; /* Added gap for increased spacing between items */
+        a {
+          display: block;
+          text-decoration: none;
+        }
+        .date {
+          color: #333;
+        }
+
+        .title {
+          color: #666;
         }
       }
     }
