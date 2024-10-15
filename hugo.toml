@@ -28,7 +28,7 @@ style = "github-dark"
   hidecolorschemetoggle = true
 
   customCSS = ["css/custom.css"]
-   customSCSS = ["css/_events.scss"]
+   customSCSS = ["css/custom2.scss"]
   # customJS = ["js/eventlist.js"]
 
 [taxonomies]
