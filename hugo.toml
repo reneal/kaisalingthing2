@@ -22,7 +22,7 @@ style = "github-dark"
   favicon_32 = "/images/favicon-32x32.png"
   favicon_16 = "/images/favicon-16x16.png"
 
-  since = 2017
+  # since = 2017
 
   colorScheme = "light"
   hidecolorschemetoggle = true
