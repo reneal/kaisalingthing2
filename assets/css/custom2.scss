@@ -1,26 +1,47 @@
+// Increase avatar image size
+.avatar {
+  img {
+    width: 30rem;
+    height: auto;
+    border-radius: 0%;
+
+    @media only screen and (max-width: 768px) {
+      width: 25rem;
+    }
+  }
+}
+
+// Override boring single color with brand colors.
 .centered {
   .about {
+    h1 {
+      display: none; // Hide author name, because our logo already contains "Kaisa Ling Thing"
+    }
     ul {
-    li {
-      a {
-        &:hover,
-        &:focus {
-          &[aria-label="Facebook"] {
-            color: #1877f2; // Facebook blue
+      li {
+        a {
+          font-size: 5rem; 
+          @media only screen and (max-width: 768px) {
+            font-size: 4rem; // New font size for smaller screens
           }
-          &[aria-label="Instagram"] {
-            color: #e4405f; // Instagram pink
+          &:hover,
+          &:focus {
+            &[aria-label="Facebook"] {
+              color: #1877f2; // Facebook blue
+            }
+            &[aria-label="Instagram"] {
+              color: #e4405f; // Instagram pink
+            }
+            &[aria-label="Spotify"] {
+              color: #1db954; // Spotify green
+            }
+            &[aria-label="Apple"] {
+              color: #a3aaae; // Apple Music gray
+            }
+            &[aria-label="Youtube"] {
+              color: #ff0000; // YouTube red
+            }
           }
-          &[aria-label="Spotify"] {
-            color: #1db954; // Spotify green
-          }
-          &[aria-label="Apple"] {
-            color: #a3aaae; // Apple Music gray
-          }
-          &[aria-label="Youtube"] {
-            color: #ff0000; // YouTube red
-          }
-        }
         }
       }
     }
