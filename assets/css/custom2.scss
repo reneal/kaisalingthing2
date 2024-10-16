@@ -90,17 +90,20 @@
       }
       .event-card {
         display: flex;
-        text-align: center;
+        text-align: left;
         gap: 1rem; /* Added gap for increased spacing between items */
         a {
-          display: block;
-          text-decoration: none;
+          flex-grow: 1;
         }
         .date {
+          flex-grow: 0; /* Change from 1 to 0 to prevent growing */
+          flex-shrink: 0; /* Prevent shrinking */
           color: #333;
+          min-width: fit-content; /* Ensure the date doesn't wrap */
         }
 
         .title {
+          flex-grow: 1;
           color: #666;
         }
       }
