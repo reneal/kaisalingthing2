@@ -116,9 +116,9 @@ style = "github-dark"
             url = "kontserdid/"
 
             [[languages.et.menu.main]]
-            name = "Kuula"
+            name = "Videod"
             weight = 3
-            url = "kuula/"
+            url = "vaata/"
 
             [[languages.et.menu.main]]
             name = "Kontakt"
