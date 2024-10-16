@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     for (const [venue, replacement] of Object.entries(venueMap)) {
-      if (venueStr.includes(venue)) {
+      if (venueStr.toLowerCase().includes(venue.toLowerCase())) {
         return replacement;
       }
     }
@@ -189,24 +189,28 @@ document.addEventListener('DOMContentLoaded', function () {
       data.events.forEach(function (event) {
             if (!groupedEvents[event.series_id]) {
               groupedEvents[event.series_id] = [];
+              groupedEvents[event.series_id].call_to_action_text = buyTicketText; // Default text, can be overriden by specific events.
 
-              // Defaults
-              groupedEvents[event.series_id].call_to_action_text = buyTicketText;
-              groupedEvents[event.series_id].title = event.title;
-              groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
-
-               // Soecial treatment for some popular series
+               // Hardcode name & other parameters for specific series
                if(event.series_id === 'kaisa-ling-thingi-kontserttuur-big-bang') {
                 if(lang === 'en') {
                   groupedEvents[event.series_id].title = "Big Bäng (New Album Tour)"; 
+                  groupedEvents[event.series_id].call_to_action_text = "Buy album or tickets";
                 }
                 else {
                   groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
+                  groupedEvents[event.series_id].call_to_action_text = "Osta album või piletid";
                 }
+                groupedEvents[event.series_id].call_to_action_url = 'https://www.hooandja.ee/projekt/kaisa-ling-thingi-kolmas-taispikk-album-big-bang'
               } 
               else if(event.series_id == 'late-night-cabaret') {
                 groupedEvents[event.series_id].title = 'Late Night Cabaret';
+                groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
                 groupedEvents[event.series_id].call_to_action_text = reservePlaceText;
+              }
+              else {
+                groupedEvents[event.series_id].title = event.title;
+                groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
               }
             }
             groupedEvents[event.series_id].push(event);
