@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
       for (const seriesId in groupedEvents) {
         if (groupedEvents.hasOwnProperty(seriesId)) {
           const events = groupedEvents[seriesId];
-          if (events.length > 1) {
+          if (events.length >= 1) {
             handleCategoryEvents(events);
           }
         }
