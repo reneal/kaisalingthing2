@@ -7,16 +7,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
-        body {  font-family: "Afacad", sans-serif;
-                font-optical-sizing: auto;
-                color: #1E1E1E;
-                background-color: #EEEBDF; }
-        h2 { font-family: inherit; font-size: 32px; font-weight: 700; line-height: 42.67px }
-        h3 { font-family: inherit; font-size: 18px; font-weight: 400; font-style: italic; line-height: 24px }
-        pre { font-family: inherit; white-space: pre-wrap; font-size: 22px; font-weight: 400; line-height: 29.33px }
+        body {
+            font-family: "Afacad", sans-serif;
+            font-optical-sizing: auto;
+            color: #1E1E1E;
+            background-color: #EEEBDF;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            width: 100vw;
+            min-height: 100vh; /* Ensure it covers the viewport height */
+            box-sizing: border-box;
+        }
+        .lyrics {
+            width: 50vw; /* 50% of the viewport width */
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto; /* Scroll if content overflows vertically */
+        }
+        .image-container {
+            width: 50vw; /* 50% of the viewport width */
+            background-image: url('images/bigbang-decorations.png');
+            background-size: 100% auto; /* Scale the height to fit fully, auto adjusts width */
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-color: #131414;
+        }
+        h2 {
+            font-family: inherit;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 42.67px;
+            margin: 0;
+        }
+        h3 {
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 24px;
+            margin: 0;
+            display: inline;
+        }
+        h3::before {
+            content: "(";
+        }
+        h3::after {
+            content: ")";
+        }
+        pre {
+            font-family: inherit;
+            white-space: pre-wrap;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 29.33px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="lyrics">
     <h2>Mamma avalaul</h2>
     <h3>Ling/Ling</h3>
     <pre>
@@ -266,5 +318,9 @@ lubab julgelt võtta napsi,
 ravitseb ka kiilaspäisust,  
 käes on kasemahlade aeg!
     </pre>
+</div>
+<div class="image-container">
+    <!-- Decorative image as background in CSS -->
+</div>
 </body>
 </html>
