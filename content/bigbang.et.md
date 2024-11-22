@@ -1,7 +1,6 @@
 +++
 title = "Big Bäng (2024)"
 slug = "bigbang"
-aliases = "bigbäng"
 notoc = "false"
 +++
 
