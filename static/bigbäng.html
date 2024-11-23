@@ -103,10 +103,10 @@
         }
 
         .table-of-contents {
-            height: 100vh;
+            min-height: 100vh;
             box-sizing: border-box;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             /* font-size: clamp(0.5rem, 1vw + 0.75rem, 4rem); */ 
             font-size: 32px;
         }
@@ -224,20 +224,13 @@
 
     .lyrics {
         order: 2; /* Ensure lyrics section comes after the image */
-        padding: 50px;
+        padding: 20px;
     }
     .png-image {
         display: none;
     }
     .menu {
-        top: -100vh; /* Start hidden off-screen above */
-        left: 0; /* Align with the left edge of the viewport */
-        width: 100vw; /* Full width of viewport */
-        height: 100vh; /* Full viewport height */
-        position: fixed; /* Fixed positioning for full-screen overlay */
-        transition: top 0.25s ease-in-out; /* Smooth sliding effect from top */
-        padding: 20px; /* Add desired padding on all sides */
-        box-sizing: border-box; /* Include padding in element's total width and height */
+        visibility: hidden;
     }
 }
 
