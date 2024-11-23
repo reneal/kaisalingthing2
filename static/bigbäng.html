@@ -23,7 +23,8 @@
             display: flex;
             width: 100vw;
             min-height: 100vh;
-            transition: transform 0.25s ease-in-out; /* Smooth transition */
+            transition: transform 0.25s ease-in-out;
+            /* Smooth transition */
         }
 
         .lyrics {
@@ -32,7 +33,8 @@
             box-sizing: border-box;
             overflow-y: auto;
             margin-left: 0px;
-            padding-left: 200px; /* Adjust this value as needed */
+            padding-left: 200px;
+            /* Adjust this value as needed */
         }
 
         .image-container {
@@ -42,20 +44,21 @@
         }
 
         .svg-image {
-    width: 25vw;
-    max-width: 25vw;
-    height: auto;
-    max-height: 100vh;
-    position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-}
+            width: 25vw;
+            max-width: 25vw;
+            height: auto;
+            max-height: 100vh;
+            position: fixed;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+        }
 
-/* TO DO Make this work */
-.svg-image.shifted {
-    opacity: 0; /* Change opacity to 0 to make it invisible */
-}
+        /* TO DO Make this work */
+        .svg-image.shifted {
+            opacity: 0;
+            /* Change opacity to 0 to make it invisible */
+        }
 
         .png-image {
             width: 100%;
@@ -86,7 +89,7 @@
             font-style: italic;
             display: inline;
         }
-        
+
         h3::before {
             content: "(";
         }
@@ -103,13 +106,13 @@
         }
 
         .table-of-contents {
-            min-height: 100vh;
-            box-sizing: border-box;
-            display: flex;
-            align-items: flex-start;
-            /* font-size: clamp(0.5rem, 1vw + 0.75rem, 4rem); */ 
-            font-size: 32px;
-        }
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center horizontally if needed */
+    flex-direction: column; /* Ensure items stack vertically */
+    font-size: 32px;
+}
 
         .table-of-contents img {
             margin-bottom: 20px;
@@ -143,16 +146,20 @@
             font-weight: bold;
             display: inline;
         }
+
         .toc-title::before {
-        content: '„'; /* Unicode for left double quote */
-    }
-    .toc-title::after {
-        content: '”'; /* Unicode for right double quote */
-    }
+            content: '„';
+            /* Unicode for left double quote */
+        }
+
+        .toc-title::after {
+            content: '”';
+            /* Unicode for right double quote */
+        }
 
 
         .toc-authors {
-            display: inline;
+            display: block;
             font-weight: 400;
             font-style: italic;
             padding-left: 1em;
@@ -161,96 +168,128 @@
         /* TO DO Paper texture background */
 
         .navigation-link {
-    position: fixed;
-    left: -100px; /* Initial position off-screen */
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    max-height: 100vh;
-    z-index: 999;
-    transition: left 0.25s ease-in-out; /* Transition for the left property */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    }
+            position: fixed;
+            left: -100px;
+            /* Initial position off-screen */
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            max-height: 100vh;
+            z-index: 999;
+            transition: left 0.25s ease-in-out;
+            /* Transition for the left property */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
 
-.visible {
-    left: 0; /* Final position when visible */
-}
+        .visible {
+            left: 0;
+            /* Final position when visible */
+        }
 
-/* Add these styles inside the <style> block in your HTML */
-    .menu {
-    position: fixed;
-    top: 0;
-    left: -50vw; /* Start hidden off-screen */
-    width: 50vw; /* Take up half the screen width */
-    height: 100vh; /* Cover full viewport height */
-    background-color: #FFFFFF; /* Adjust as needed */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-    transition: left 0.25s ease-in-out; /* Smooth sliding effect */
-    z-index: 998; /* Ensure it overlays other content */
-    justify-items: center;
-}
+        /* Add these styles inside the <style> block in your HTML */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -50vw;
+            /* Start hidden off-screen */
+            width: 50vw;
+            /* Take up half the screen width */
+            height: 100vh;
+            /* Cover full viewport height */
+            background-color: #FFFFFF;
+            /* Adjust as needed */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: left 0.25s ease-in-out;
+            /* Smooth sliding effect */
+            z-index: 998;
+            /* Ensure it overlays other content */
+            justify-items: center;
+        }
 
-.menu.visible {
-    left: 0; /* Slide the menu in */
-}
+        .menu.visible {
+            left: 0;
+            /* Slide the menu in */
+        }
 
-.container.shifted {
-    transform: translateX(50vw); /* Move the main content out of the way */
-    transition: transform 0.25s ease-in-out; /* Smooth transition */
-}
-@media only screen and (max-width: 767px) {
-    .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
+        .container.shifted {
+            transform: translateX(50vw);
+            /* Move the main content out of the way */
+            transition: transform 0.25s ease-in-out;
+            /* Smooth transition */
+        }
 
-    .lyrics, .image-container {
-        width: 100vw; /* Full width of viewport */
-        margin: 0; /* No margin */
-    }
+        @media only screen and (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: flex-start;
+                /* Align items to the start */
+            }
 
-    .image-container {
-        order: 1; /* Ensure the image-container comes first */
-    }
+            .lyrics,
+            .image-container {
+                width: 100vw;
+                /* Full width of viewport */
+                margin: 0;
+                /* No margin */
+            }
 
-    .svg-image, .png-image {
-        width: 100vw; /* Full width of viewport */
-        max-width: 100vw; /* Avoid exceeding container size */
-        position: relative; /* Ensure relative positioning */
-        transform: none; /* Remove transform for better layout */
-        top: 0; /* No offset from top */
-        left: 0; /* No offset from left */
-    }
+            .image-container {
+                order: 1;
+                /* Ensure the image-container comes first */
+            }
 
-    .lyrics {
-        order: 2; /* Ensure lyrics section comes after the image */
-        padding: 20px;
-    }
-    .png-image {
-        display: none;
-    }
-    .menu {
-        visibility: hidden;
-    }
-}
+            .svg-image,
+            .png-image {
+                width: 100vw;
+                /* Full width of viewport */
+                max-width: 100vw;
+                /* Avoid exceeding container size */
+                position: relative;
+                /* Ensure relative positioning */
+                transform: none;
+                /* Remove transform for better layout */
+                top: 0;
+                /* No offset from top */
+                left: 0;
+                /* No offset from left */
+            }
 
-.navigation-link-container.desktop {
-    display: none;
-}
+            .lyrics {
+                order: 2;
+                /* Ensure lyrics section comes after the image */
+                padding: 20px;
+            }
 
-@media (min-width: 768px) {
-    .navigation-link-container.desktop {
-        display: block;
-    }
-}
+            .png-image {
+                display: none;
+            }
+
+            .menu {
+                visibility: hidden;
+            }
+        }
+
+        
+
+        .navigation-link-container.desktop {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .navigation-link-container.desktop {
+                display: block;
+            }
+        }
     </style>
 </head>
 
 <body>
-   <!-- Desktop Navigation Link -->
-   <div class="navigation-link-container hide desktop">
-    <img src="images/bigbang-laulusonad-vertical.svg" alt="Laulusõnad" class="navigation-link">
-</div>
+    <!-- Desktop Navigation Link -->
+    <div class="navigation-link-container hide desktop">
+        <img src="images/bigbang-laulusonad-vertical.svg" alt="Laulusõnad" class="navigation-link">
+    </div>
     <div class="menu">
         <div class="table-of-contents">
             <ul>
@@ -258,16 +297,16 @@
                             avalaul</span> <span class="toc-authors">Ling / Ling</span></a></li>
                 <li><a href="#avanti-onnaksed"><span class="toc-number">2.</span> <span class="toc-title">Avanti,
                             õnnaksed!</span> <span class="toc-authors">Ling / Ling</span></a></li>
-                <li><a href="#kangelase-hallilaul"><span class="toc-number">3.</span> <span
-                            class="toc-title">Kangelase hällilaul</span> <span class="toc-authors">Ling /
+                <li><a href="#kangelase-hallilaul"><span class="toc-number">3.</span> <span class="toc-title">Kangelase
+                            hällilaul</span> <span class="toc-authors">Ling /
                             Ling</span></a></li>
                 <li><a href="#taaveti-laul"><span class="toc-number">4.</span> <span class="toc-title">Taaveti
                             laul</span> <span class="toc-authors">Ling / Ling</span></a></li>
                 <li><a href="#elu-naistega-on-jant"><span class="toc-number">5.</span> <span class="toc-title">Elu
                             naistega on jant</span> <span class="toc-authors">Kaisa Ling Thing / Ling, Tungal,
                             Ilves</span></a></li>
-                <li><a href="#kasemahlade-aeg"><span class="toc-number">6.</span> <span
-                            class="toc-title">Kasemahlade aeg</span> <span class="toc-authors">Ling /
+                <li><a href="#kasemahlade-aeg"><span class="toc-number">6.</span> <span class="toc-title">Kasemahlade
+                            aeg</span> <span class="toc-authors">Ling /
                             Ling</span></a></li>
                 <li><a href="#leppimise-viimane-faas"><span class="toc-number">7.</span> <span
                             class="toc-title">Leppimise viimane faas</span> <span class="toc-authors">Hunter, Ling /
@@ -284,8 +323,8 @@
             <div class="table-of-contents" id="toc">
                 <ul>
                     <img src="images/bigbang-laulusonad.svg" alt="Laulusõnad:" id="toc-image">
-                    <li><a href="#mamma-avalaul"><span class="toc-number">1.</span> <span class="toc-title">Mamma
-                                avalaul</span> <span class="toc-authors">Ling / Ling</span></a></li>
+                    <li><a href="#mamma-avalaul"><span class="toc-number">1.</span> <span class="toc-text"></span><span class="toc-title">Mamma
+                                avalaul</span> <span class="toc-authors">Ling / Ling</span> </span></a></li>
                     <li><a href="#avanti-onnaksed"><span class="toc-number">2.</span> <span class="toc-title">Avanti,
                                 õnnaksed!</span> <span class="toc-authors">Ling / Ling</span></a></li>
                     <li><a href="#kangelase-hallilaul"><span class="toc-number">3.</span> <span
@@ -662,47 +701,47 @@ me mäng.
             <img src="images/bigbang-decorations.png" alt="Decorations Image" class="png-image">
         </div>
     </div>
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const navigationLink = document.querySelector('.navigation-link');
-    const menu = document.querySelector('.menu');
-    const container = document.querySelector('.container');
-    const menuLinks = document.querySelectorAll('.menu a');
-    const toc = document.querySelector('.table-of-contents');
-    const tocImage = document.getElementById('toc-image'); // Directly select the image by its ID
-    const svgImage = document.querySelector('.svg-image');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navigationLink = document.querySelector('.navigation-link');
+            const menu = document.querySelector('.menu');
+            const container = document.querySelector('.container');
+            const menuLinks = document.querySelectorAll('.menu a');
+            const toc = document.querySelector('.table-of-contents');
+            const tocImage = document.getElementById('toc-image'); // Directly select the image by its ID
+            const svgImage = document.querySelector('.svg-image');
 
-    function toggleMenu() {
-        menu.classList.toggle('visible');
-        container.classList.toggle('shifted');
-        svgImage.classList.toggle('shifted'); // Toggle the shifted class on svg-image
-    }
-
-    navigationLink.addEventListener('click', toggleMenu);
-
-    menuLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
-
-    function checkScroll(immediate = false) {
-        const tocBottom = toc.offsetTop + tocImage.offsetHeight;
-
-        if (window.scrollY > tocBottom) {
-            navigationLink.classList.add('visible');
-            if (immediate) {
-                navigationLink.style.transition = 'none';
-                navigationLink.offsetHeight; // jshint ignore:line
-                navigationLink.style.transition = '';
+            function toggleMenu() {
+                menu.classList.toggle('visible');
+                container.classList.toggle('shifted');
+                svgImage.classList.toggle('shifted'); // Toggle the shifted class on svg-image
             }
-        } else {
-            navigationLink.classList.remove('visible');
-        }
-    }
 
-    checkScroll(true);
-    window.addEventListener('scroll', () => checkScroll());
-});
-</script>
+            navigationLink.addEventListener('click', toggleMenu);
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            function checkScroll(immediate = false) {
+                const tocBottom = toc.offsetTop + tocImage.offsetHeight;
+
+                if (window.scrollY > tocBottom) {
+                    navigationLink.classList.add('visible');
+                    if (immediate) {
+                        navigationLink.style.transition = 'none';
+                        navigationLink.offsetHeight; // jshint ignore:line
+                        navigationLink.style.transition = '';
+                    }
+                } else {
+                    navigationLink.classList.remove('visible');
+                }
+            }
+
+            checkScroll(true);
+            window.addEventListener('scroll', () => checkScroll());
+        });
+    </script>
 </body>
 
 </html>
