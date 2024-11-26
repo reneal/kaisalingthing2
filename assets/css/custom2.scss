@@ -66,8 +66,11 @@
       .category-header {
         display: flex;
         align-items: center;
+        
         .post-title {
           flex-grow: 1;
+          min-height: 5.4rem;
+          
           a {
             &:hover {
               color: #007bff;
@@ -76,7 +79,9 @@
         }
         .buy-ticket-button {
           padding: 0.6rem 1rem;
+          // background-color: #007bff;
           background-color: #007bff;
+          white-space: nowrap;
           color: white;
           &:hover,
           &:focus {
@@ -84,6 +89,24 @@
           }
         }
       }
+
+  .event-series-kurrameerivad .buy-ticket-button {
+        background-color: #F1EB96;
+        color: #333;
+        &:hover,
+        &:focus {
+          background-color: #EC605B;
+        }
+      }
+
+      .event-series-late-night-cabaret .buy-ticket-button {
+        background-color: #D60170; /* Example: Late Night Cabaret series */
+        &:hover,
+        &:focus {
+          background-color: darken(#D60170, 10%);
+        }
+      }
+
       .event-image {
         height: auto;
         border-radius: 8px;

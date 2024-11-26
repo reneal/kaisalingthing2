@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   if (lang === 'en') {
-    var reservePlaceText = 'Reserve a seat'
+    var reservePlaceText = 'Reserve seat'
   }
   else {
     var reservePlaceText = 'Broneeri istekoht'
@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'Sakala Keskus': 'Viljandi (Sakala Keskus)',
       'Vilde ja Vine': 'Tartu (Vilde ja Vine)',
       'Endla Kohvik': 'Pärnu (Endla Kohvik)',
-      'Heldeke': "Tallinn (Heldeke)"
+      'Heldeke': "Tallinn (Heldeke)",
+      'Uus Laine': "Tallinn (Uus Laine)"
     };
     
     for (const [venue, replacement] of Object.entries(venueMap)) {
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       // Display one title / general information per category with 'Osta pilet' button styled as a button.
       let categoryHtml = `
-        <div class="eventseries-grid">
+        <div class="eventseries-grid ${events.seriesClass}">
           <div class="category-header">
             <h3 class="post-title">
               <a href="${events.call_to_action_url}" target="_blank">${events.title}</a>
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
             <a class="title" href="${event.url}" target="_blank">${formatEventLocation(event.venue)}</a>
             <div class="buy-ticket-section">
-              <a href="${event.buy_tickets_url}" target="_blank" class="buy-ticket-button">
+              <a href="${event.buy_tickets_url}" target="_blank">
                 ${buyTicketText}
               </a>
             </div>
@@ -201,11 +202,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 else {
                   groupedEvents[event.series_id].title = 'Big Bäng plaadiesitlustuur';
                 }
+                
               } 
+              else if(event.series_id == 'kurrameerivad') {
+                groupedEvents[event.series_id].title = 'Räpina Jack & Kaisa Ling Thing kurrameerivad!';
+                groupedEvents[event.series_id].seriesClass = 'event-series-kurrameerivad';
+              }
               else if(event.series_id == 'late-night-cabaret') {
                 groupedEvents[event.series_id].title = 'Late Night Cabaret';
                 groupedEvents[event.series_id].call_to_action_url = event.buy_tickets_url;
                 groupedEvents[event.series_id].call_to_action_text = reservePlaceText;
+                groupedEvents[event.series_id].seriesClass = 'event-series-late-night-cabaret';
               }         
             }
             groupedEvents[event.series_id].push(event);
