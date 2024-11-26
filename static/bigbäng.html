@@ -41,13 +41,14 @@
             width: 50vw;
             /* 50% of the viewport width */
             background-color: #131414;
+            background-image: url()
         }
 
         .svg-image {
-            width: 25vw;
-            max-width: 25vw;
+            width: 100vw;
+            max-width: 50vw;
             height: auto;
-            max-height: 100vh;
+            max-height: 80vh;
             position: fixed;
             top: 50%;
             left: 75%;
@@ -220,7 +221,7 @@
             /* Smooth transition */
         }
 
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: 1200px) {
             .container {
                 flex-direction: column;
                 /* Stack items vertically */
@@ -228,17 +229,20 @@
                 /* Align items to the start */
             }
 
-            .lyrics,
-            .image-container {
+            .lyrics {
                 width: 100vw;
-                /* Full width of viewport */
                 margin: 0;
-                /* No margin */
+                background-image: url("images/web_taust_mobla.webp");
+                background-position: right center;
+                background-repeat: no-repeat;
+                background-size: 16em auto;
             }
 
             .image-container {
                 order: 1;
                 /* Ensure the image-container comes first */
+                width: 100vw;
+                margin: 0;
             }
 
             .svg-image,
@@ -270,23 +274,18 @@
             .menu {
                 visibility: hidden;
             }
-        }
-
-        
-
-        .navigation-link-container.desktop {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
             .navigation-link-container.desktop {
                 display: block;
             }
         }
 
+        .navigation-link-container.desktop {
+            display: none;
+        }
+
         #toc-image {
     width: auto; 
-    height: 2em;
+    height: 2.5em;
 }
     </style>
 </head>
