@@ -4,4 +4,4 @@ slug = "contact"
 aliases = "kontakt"
 +++
 
-All inquiries: kaisalingthing@gmail.com
+All inquiries: info@kaisalingthing.ee
