@@ -5,7 +5,9 @@ aliases = "contact"
 +++
 
 ### Press & Esinemised
-E-post: kaisalingthing@gmail.com
+Kutsu meid esinema: esinemised@kaisalingthing.ee
+
+Kõik muud teemad: info@kaisalingthing.ee
 
 ---
 
